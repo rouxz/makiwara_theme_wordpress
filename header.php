@@ -1,10 +1,10 @@
 <?php
 /**
- * makiwara header
+ * Theme created for makiwara.me
+ * Header of page
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage makiwara
  */
 ?>
 <!DOCTYPE html>
@@ -32,7 +32,7 @@
 
 
 
-<header class="darker" <?php body_class(); ?>>
+<header id="#main_header" class="darker">
 		<div id="title" class="dark"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 		<nav>
 			<?php $args = array(
@@ -51,7 +51,7 @@
 			); 
 			$categories = get_categories( $args ); 
 			foreach ($categories as $category) {
-				echo '<div class="top_button"><a href="" title="">'.$category->category_nicename.'</a></div>';
+				echo '<div class="top_button"><a href="'.get_category_link( $category->cat_ID ).'" title="">'.$category->category_nicename.'</a></div>';
 				}
 		  
 		  ?></nav>

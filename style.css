@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 100 : general architecture 
 
-
+800 : Browsing through posts
 900 : reusable classes 
 1000 : wp-core 
 */
@@ -39,7 +39,7 @@ body {
 
 
 
-header{
+#main_header{
 
 	position: fixed;
 	width: 100%;
@@ -54,7 +54,7 @@ header{
 
 
 
-footer{
+#main_footer{
 
 	position: relative;
 	display:block;
@@ -84,6 +84,16 @@ footer{
 }
 
 
+#container{
+
+	position : relative;
+	max-width: 700px;
+	left: 350px;
+	display: block;
+	
+}
+
+/* deprecated à virer */
 section{
 
 	position : relative;
@@ -227,13 +237,6 @@ article footer p.small_space{
     height: 1.5em
 }
 
-/* tweeter button */
-aside.tweet{
-        position: absolute;
-        left: 724px;
-        top: 0;
-        
-}
 
 /* button for top bar */
 /* ------------------ */
@@ -285,6 +288,20 @@ aside.tweet{
     text-decoration :none;
 }
 
+
+/* -------------------------- */
+/* 100 - general architecture */
+/* -------------------------- */
+
+header.category{
+    display: block;
+	padding: 5px 5px 5px 5px;
+	margin: 20px 0px 10px 0px;
+	border: 0;
+    width: 700px;
+	min-height: 60px;
+	background-color: white;
+}
 
 
 

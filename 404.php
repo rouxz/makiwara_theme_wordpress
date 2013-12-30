@@ -1,7 +1,7 @@
 <?php
 /**
  * Theme created for makiwara.me
- *
+ * 404 error
  *
  * @package WordPress
  * @subpackage makiwara
@@ -9,7 +9,7 @@
 ?>
 <?php get_header(); ?>
 
-
+<section id="#container">
 	<article id="post-<?php the_ID(); ?>" class="shadow post">
 		<h1 class="post">Page not found</h1>
 			<!--Category-->
@@ -25,7 +25,7 @@
 				<!-- footer of the post -->
 			</footer>
 </article><!-- #post-## -->
-
+</section>
 <?php
 get_sidebar();
 get_footer();

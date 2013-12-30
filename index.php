@@ -1,13 +1,16 @@
 <?php
 /**
  * Theme created for makiwara.me
-
+ * Index page
+ *
+ * @package WordPress
+ * @subpackage makiwara
  */
 ?>
 <?php get_header(); ?>
 
 
-<section>
+<section id="#container">
 		<?php
 			if ( have_posts() ) :
 				// Start the Loop.
