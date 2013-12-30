@@ -34,10 +34,27 @@
 
 <header class="darker" <?php body_class(); ?>>
 		<div id="title" class="dark"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-		<nav><tpl:Categories>
-            <div class="top_button"><a href="{{tpl:CategoryURL}}" title="{{tpl:CategoryTitle encode_html="1"}}">
-            {{tpl:CategoryTitle encode_html="1"}}
-        </a></div></tpl:Categories></nav>
+		<nav>
+			<?php $args = array(
+				'type'                     => 'post',
+				'child_of'                 => 0,
+				'parent'                   => '',
+				'orderby'                  => 'name',
+				'order'                    => 'ASC',
+				'hide_empty'               => 1,
+				'hierarchical'             => 1,
+				'exclude'                  => '',
+				'include'                  => '',
+				'number'                   => '10',
+				'taxonomy'                 => 'category',
+				'pad_counts'               => false 
+			); 
+			$categories = get_categories( $args ); 
+			foreach ($categories as $category) {
+				echo '<div class="top_button"><a href="" title="">'.$category->category_nicename.'</a></div>';
+				}
+		  
+		  ?></nav>
 		<div id="searchbox">
             <form action="" method="get">
                 <label for="q">Search:</label>

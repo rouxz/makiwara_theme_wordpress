@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme created for makiwara.me based on twenty fourteen
+ * Theme created for makiwara.me
  *
  *
  * @package WordPress
