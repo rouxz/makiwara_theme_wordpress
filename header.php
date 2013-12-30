@@ -32,9 +32,9 @@
 
 
 
-<header id="#main_header" class="darker">
+<header id="main_header" class="darker shadow">
 		<div id="title" class="dark"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-		<nav>
+		<nav id="navbar">
 			<?php $args = array(
 				'type'                     => 'post',
 				'child_of'                 => 0,
@@ -52,7 +52,7 @@
 			$categories = get_categories( $args ); 
 			foreach ($categories as $category) {
 				echo '<div class="top_button"><a href="'.get_category_link( $category->cat_ID ).'" title="">'.$category->category_nicename.'</a></div>';
-				}
+				};
 		  
 		  ?></nav>
 		<div id="searchbox">
