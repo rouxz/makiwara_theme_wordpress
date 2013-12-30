@@ -1,13 +1,13 @@
 <?php
 /**
- * The template for displaying 404 pages (Not Found)
+ * Theme created for makiwara.me
+ *
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage makiwara
  */
-
-get_header(); ?>
+?>
+<?php get_header(); ?>
 
 
 	<div id="primary" class="content-area">

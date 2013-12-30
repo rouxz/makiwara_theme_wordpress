@@ -1,29 +1,15 @@
 <?php
 /**
- * The main template file
+ * Theme created for makiwara.me based on twenty fourteen
  *
- * This is the most generic template file in a WordPress theme and one
- * of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query,
- * e.g., it puts together the home page when no home.php file exists.
- *
- * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage makiwara
  */
-
-get_header(); ?>
-
-<div id="main-content" class="main-content">
-
-<?php
-	if ( is_front_page() && twentyfourteen_has_featured_posts() ) {
-		// Include the featured content template.
-		get_template_part( 'featured-content' );
-	}
 ?>
+<?php get_header(); ?>
+
+<section id="main-content" class="main-content">
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
@@ -54,7 +40,7 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 	<?php get_sidebar( 'content' ); ?>
-</div><!-- #main-content -->
+</section><!-- #main-content -->
 
 <?php
 get_sidebar();
