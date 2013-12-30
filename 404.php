@@ -10,23 +10,23 @@
 <?php get_header(); ?>
 
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-
-			<header class="page-header">
-				<h1 class="page-title"><?php _e( 'Not Found', 'twentyfourteen' ); ?></h1>
-			</header>
-
-			<div class="page-content">
-				<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyfourteen' ); ?></p>
-
-				<?php get_search_form(); ?>
-			</div><!-- .page-content -->
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
+	<article id="post-<?php the_ID(); ?>" class="shadow post">
+		<h1 class="post">Page not found</h1>
+			<!--Category-->
+			<h2 class="post"></h2>
+			<!--  Content of the post-->
+			<div class="post-content">
+				<?php
+					Error 404 - Page not found
+				?>
+			</div>
+				
+			<footer class="post">
+				<!-- footer of the post -->
+			</footer>
+</article><!-- #post-## -->
 
 <?php
-get_sidebar( 'content' );
 get_sidebar();
 get_footer();
+?>

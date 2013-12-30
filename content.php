@@ -9,8 +9,8 @@
 ?>
 
 
-<article id="post-<?php the_ID(); ?>" class="shadow minimal">
-<h1 class="post"><a href=""></a></h1>
+<article id="post-<?php the_ID(); ?>" class="shadow post">
+<h1 class="post"><?php the_title() ?></h1>
     <!--Category-->
     <h2 class="post"></h2>
     <!--  Content of the post-->
@@ -26,8 +26,7 @@
 		<!-- tags of the post -->
 		<p>
 			<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
-        </p>
-        
+        </p>  
     </footer>
 </article><!-- #post-## -->
 
