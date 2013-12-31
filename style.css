@@ -9,8 +9,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* Content :
 
 100 : general architecture 
-200 : Elements of header 
+200 : Elements of main header 
 300 : Contents
+300 : Elements of main footer
 700 : forms
 800 : Browsing through posts
 900 : reusable classes 
@@ -39,12 +40,15 @@ body {
     
 }
 
-
+#wrapper{
+	position: relative;
+}
 
 #main_header{
 
 	position: fixed;
 	width: 100%;
+	min-width: 1280px;
 	height: 40px;
 	/*display: inline-block;*/
 	clear:none;
@@ -62,6 +66,7 @@ body {
 	display:block;
 	text-align : center;
 	height: 200px;
+	min-width: 1280px;
     font-size: medium;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -79,6 +84,7 @@ body {
 	padding: 20px 0 20px 0;
     margin: 40px 0 0 0;
     width: 100%;
+	min-width: 1280px;
    /* height: auto;*/
     min-height: 700px;
   /*  display:inline-block;*/
@@ -89,8 +95,8 @@ body {
 #container{
 
 	position : relative;
-	max-width: 700px;
-	left: 350px;
+	max-width: 720px;
+	left: 280px;
 	display: block;
 	
 }
@@ -98,9 +104,9 @@ body {
 
 
 
-/* -------------------------- */
-/* 200 - Elements of header   */
-/* -------------------------- */
+/* ------------------------------- */
+/* 200 - Elements of main header   */
+/* ------------------------------- */
 #title{
 	
 	/*taille*/
@@ -110,8 +116,9 @@ body {
 	/* positioning */
 	position: absolute;
 	bottom: 0;
-	left: 40px;
-    width: 300px;
+	left: 0;
+    width: 270px;
+	padding: 0 5px 0 5px;
 	
 	/*  mise en forme */
 	text-align : right;
@@ -124,7 +131,7 @@ body {
     
 	position: absolute;
 	bottom: 0;
-	left: 350px;
+	left: 280px;
 	height: auto;
 	padding: 0;
 	/*width : 300px;*/
@@ -190,12 +197,13 @@ body {
 #searchbox{
 	
 	position: absolute;
-	left : 60%;
+	left: 1000px;
 	top: 7px;
 	margin: 0;
 	padding: 0;
 	border: 0;
 	height: 26px;
+	width: auto;
 	display : inline-block;
 	text-align : left;
 	
@@ -214,7 +222,7 @@ article.post{
 	padding: 5px 5px 5px 5px;
 	margin: 20px 0px 10px 0px;
 	border: 0;
-    width: 700px;
+    width: 710px;
 	min-height: 60px;
 	background-color: white;
 }
@@ -224,7 +232,7 @@ article.minimal{
 	padding: 5px 5px 5px 5px;
 	margin: 20px 0px 10px 0px;
 	border: 0;
-    width: 700px;
+    width: 710px;
     height: 1.5em;
     min-height: 1.5em;
 	background-color: white;
@@ -292,7 +300,19 @@ article footer p.small_space{
     height: 1.5em
 }
 
+/* -------------------------------- */
+/* 400 - Elements of main foorter	*/
+/* -------------------------------- */
 
+#footer_content{
+	position: relative;
+	border: 0;
+	padding: 0;
+	top: 0;
+	left: 280px;
+	width: 720px;
+	text-align: center;
+}
 
 
 /* ---------------------------- */
@@ -300,6 +320,10 @@ article footer p.small_space{
 /* ---------------------------- */
 
 input[type=text].header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 	background: #131313;
 	border: 0;
 	padding: 0;
@@ -312,9 +336,11 @@ input[type=text].header{
 }
 
 input[type=submit].header{
-	float: right;
+	position: absolute;
+	top: 0;
+	left: 166px;
 	text-shadow: none !important;
-	border: none;
+	border: 0;
 	height: 26px;
 	width: 26px;
 	background: #131313;

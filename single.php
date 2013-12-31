@@ -24,9 +24,9 @@
             ?>
             <!-- include link to previous or next page -->
             <article id="post-link-<?php the_ID(); ?>" class="shadow minimal">
-                Previous | Next
+                <?php  previous_post_link(); ?> <?php if (get_previous_post() != '' && get_next_post_link() != '') { echo '|';} ?> <?php next_post_link(); ?>
             </article>
-            <?php ?>
+            
             
             <article id="post-comment-<?php the_ID(); ?>" class="shadow comments">
                 <!-- include comments -->

@@ -31,7 +31,10 @@
                 get_template_part( 'content', get_post_format() );
 
             endwhile;
-
+			//include pagination
+			<article class="shadow minimal">
+				posts_nav_link();
+			</article>
         else :
             // If no content, include the "No posts found" template.
             get_template_part( 'content', 'none' );

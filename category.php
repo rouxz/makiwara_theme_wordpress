@@ -17,13 +17,13 @@
     <header class="category shadow minimal">
         <h1 class="category"><?php printf( __( 'Category Archives: %s', 'twentyfourteen' ), single_cat_title( '', false ) ); ?></h1>
 
-    <?php
-        // Show an optional term description.
-        $term_description = term_description();
-        if ( ! empty( $term_description ) ) :
-            printf( '<div class="taxonomy-description">%s</div>', $term_description );
-        endif;
-    ?>
+		<?php
+			// Show an optional term description.
+			$term_description = term_description();
+			if ( ! empty( $term_description ) ) :
+				printf( '<div class="taxonomy-description">%s</div>', $term_description );
+			endif;
+		?>
     </header>
     
      <!--display the related posts -->
@@ -39,7 +39,10 @@
                 get_template_part( 'content', get_post_format() );
 
             endwhile;
-
+			//include pagination
+			<article class="shadow minimal">
+				posts_nav_link();
+			</article>
         else :
             // If no content, include the "No posts found" template.
             get_template_part( 'content', 'none' );
