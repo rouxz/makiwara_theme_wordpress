@@ -9,7 +9,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* Content :
 
 100 : general architecture 
-
+200 : Elements of header 
+300 : Contents
+700 : forms
 800 : Browsing through posts
 900 : reusable classes 
 1000 : wp-core 
@@ -25,7 +27,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     margin:0;
     padding:0;
 	border: 0;
-    font-family : Verdana, "Sans serif";
+    font-family : "Open Sans", sans-serif;
 }
 
 
@@ -93,20 +95,12 @@ body {
 	
 }
 
-/* deprecated à virer */
-section{
-
-	position : relative;
-	max-width: 700px;
-	left: 350px;
-	display: block;
-	
-}
 
 
 
-/* elements of header   */ 
-/* -----------------    */
+/* -------------------------- */
+/* 200 - Elements of header   */
+/* -------------------------- */
 #title{
 	
 	/*taille*/
@@ -122,12 +116,9 @@ section{
 	/*  mise en forme */
 	text-align : right;
 	font-size : X-large;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 
 }
-
-
 
 #navbar{
     
@@ -136,33 +127,87 @@ section{
 	left: 350px;
 	height: auto;
 	padding: 0;
+	/*width : 300px;*/
 	margin: 0;
 	border: 0;
 	display: inline-block;
 }
 
 
-#searchbox{
-	
-	position: absolute;
-	top: 0;
-	left: 900px;	
+/* button for top bar */
+/* ------------------ */
+
+.top_button{
+	position: relative;
+	display: table-cell;
+	bottom: 0px;
+	min-width: 80px;
 	height: 1.5em;
-	width : 300px;
 	margin: 0;
 	padding: 0;
-	display : inline-block;
-	text-align : right;
-    font-size: small;
+	
+	
+	font-weight: bold;
+    font-size: medium;
+	text-align: center;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+	
+	/* line underneath the button */
+	border-bottom: solid rgba(10,140,112,0.5);
+	border-bottom-width: 4px;
+	border-right: solid rgba(167, 168, 171, 0.5);
+	border-right-width: 1px;
+
+}
+
+	
+.top_button:hover{
+	border-bottom: solid rgba(14,204,163,1);
+    color: rgb(14,204,163);
+}	
+
+
+
+.top_button a{
+    color: rgb(167, 168, 171);
+    text-decoration:none;
+}
+
+.top_button a:hover{
+    color: rgb(14,204,163);
+    text-decoration:none;
+}
+
+.top_button a:visited{
+    color: rgb(167, 168, 171);
+    text-decoration :none;
 }
 
 
 
 
+#searchbox{
+	
+	position: absolute;
+	left : 60%;
+	top: 7px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 26px;
+	display : inline-block;
+	text-align : left;
+	
+	
+}
 
-/* Post related */
-/* ------------ */
+
+
+
+/* -------------------------- */
+/* 300 - Contents   		  */
+/* -------------------------- */
 
 article.post{
 	display: block;
@@ -248,55 +293,38 @@ article footer p.small_space{
 }
 
 
-/* button for top bar */
-/* ------------------ */
 
-.top_button{
-	position: relative;
-	display: table-cell;
-	bottom: 0px;
-	min-width: 80px;
-	height: 1.5em;
-	margin: 0;
+
+/* ---------------------------- */
+/* 700 - forms					*/
+/* ---------------------------- */
+
+input[type=text].header{
+	background: #131313;
+	border: 0;
 	padding: 0;
-	
-	
-	font-weight: bold;
-    font-size: medium;
-	text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-	
-	/* line underneath the button */
-	border-bottom: solid rgba(10,140,112,0.5);
-	border-bottom-width: 4px;
-	border-right: solid rgba(167, 168, 171, 0.5);
-	border-right-width: 1px;
-
+	margin-right: 0;
+	margin-bottom: 0;
+	width: 192px;
+	height: 26px;
+	color: #999999;
+	outline: none;
 }
 
-	
-.top_button:hover{
-	border-bottom: solid rgba(14,204,163,1);
-    color: rgb(14,204,163);
-}	
-
-
-
-.top_button a{
-    color: rgb(167, 168, 171);
-    text-decoration:none;
+input[type=submit].header{
+	float: right;
+	text-shadow: none !important;
+	border: none;
+	height: 26px;
+	width: 26px;
+	background: #131313;
+	background-image: url(http://s.wordpress.org/wp-includes/images/admin-bar-sprite.png?d=20120831);
+	background-position: 100% 2px;
+	background-repeat: no-repeat;
+	border-radius: 0;
+	padding: 0;
 }
 
-.top_button a:hover{
-    color: rgb(14,204,163);
-    text-decoration:none;
-}
-
-.top_button a:visited{
-    color: rgb(167, 168, 171);
-    text-decoration :none;
-}
 
 
 /* ---------------------------- */
@@ -360,6 +388,7 @@ a {
 
 
 .alert{
+	;
 }
 
 
@@ -374,7 +403,7 @@ a {
 
 /* -----------------------------*/
 /*	1000 - 	WordPress Core		*/
---------------------------------*/
+/* -----------------------------*/
 .alignnone {
     margin: 5px 20px 20px 0;
 }

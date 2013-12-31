@@ -55,14 +55,14 @@
 				};
 		  
 		  ?></nav>
-		<div id="searchbox">
-            <form action="" method="get">
-                <label for="q">Search:</label>
-                <input name="q" id="q" type="text" size="10"
-                value="" accesskey="4" />
-                <input type="submit" class="submit" value="ok" />
+		<!-- champ de recherche -->
+		<aside id="searchbox">
+            <form action="<?php echo home_url( '/' ); ?>" method="get">
+                <input name="s" id="q" type="text" size="10" class="header" 
+                value="" accesskey="4" placeholder="Search the blog..."/>
+                <input type="submit" class="submit header" value="ok" />
             </form>
-        </div>
+        </aside>
 </header>
 
 <div id="middle" class="clear">

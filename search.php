@@ -1,7 +1,7 @@
 <?php
 /**
  * Theme created for makiwara.me
- * display all the post of a category
+ * display all the results of a search
  *
  * @package WordPress
  * @subpackage makiwara
@@ -13,21 +13,13 @@
 <section id="container">
 
     <!-- header for explaining the related category -->
-    <?php if ( have_posts() ) : ?>
     <header class="category shadow minimal">
-        <h1 class="category"><?php printf( __( 'Category Archives: %s', 'twentyfourteen' ), single_cat_title( '', false ) ); ?></h1>
-
-    <?php
-        // Show an optional term description.
-        $term_description = term_description();
-        if ( ! empty( $term_description ) ) :
-            printf( '<div class="taxonomy-description">%s</div>', $term_description );
-        endif;
-    ?>
+        <h1 class="category">Search for : <?php the_search_query(); ?></h1>
     </header>
     
      <!--display the related posts -->
     <?php
+		if ( have_posts() ) :
             // Start the Loop.
             while ( have_posts() ) : the_post();
 

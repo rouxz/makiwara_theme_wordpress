@@ -10,7 +10,7 @@
 <?php get_header(); ?>
 
 
-<section id="#container">
+<section id="container">
 		<?php
 			if ( have_posts() ) :
 				// Start the Loop.

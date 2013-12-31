@@ -9,7 +9,7 @@
 ?>
 
 <?php get_header(); ?>
-<section id="#container">
+<section id="container">
 			<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();
