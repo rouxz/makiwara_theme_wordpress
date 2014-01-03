@@ -22,23 +22,22 @@
 					/* content of post */
                     get_template_part( 'content', get_post_format() );
             ?>
-            <!-- include link to previous or next page -->
-            <article id="post-link-<?php the_ID(); ?>" class="shadow minimal">
-                <?php  previous_post_link(); ?> <?php if (get_previous_post() != '' && get_next_post_link() != '') { echo '|';} ?> <?php next_post_link(); ?>
-            </article>
+				<!-- include link to previous or next page -->
+				<article id="post-link-<?php the_ID(); ?>" class="shadow minimal">
+					<?php  previous_post_link(); ?> <?php if (get_previous_post() != '' && get_next_post_link() != '') { echo '|';} ?> <?php next_post_link(); ?>
+				</article>
             
-            
-            <article id="post-comment-<?php the_ID(); ?>" class="shadow comments">
-                <!-- include comments -->
-                <?php
-    
-                        // If comments are open or we have at least one comment, load up the comment template.
-                        if ( comments_open() || get_comments_number() ) {
-                            comments_template();
-                        }
-                    endwhile;
-                ?>
-            </article>
+             <!-- include comments -->
+			<?php
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ){
+						echo '<article id="post-comment-',the_ID(),' class="shadow comments">';
+						comments_template();
+						echo '</article>';
+					}
+				
+                 endwhile;
+            ?>
 
 </section>
 <?php

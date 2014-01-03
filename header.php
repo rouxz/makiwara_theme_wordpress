@@ -51,7 +51,7 @@
 			); 
 			$categories = get_categories( $args ); 
 			foreach ($categories as $category) {
-				echo '<div class="top_button"><a href="'.get_category_link( $category->cat_ID ).'" title="">'.$category->category_nicename.'</a></div>';
+				echo '<div class="top_button"><a href="'.get_category_link( $category->cat_ID ).'" title="">'.$category->cat_name.'</a></div>';
 				};
 		  
 		  ?></nav>
@@ -60,7 +60,7 @@
             <form action="<?php echo home_url( '/' ); ?>" method="get">
                 <input name="s" id="q" type="text" size="10" class="header" 
                 value="" accesskey="4" placeholder="Search the blog..."/>
-                <input type="submit" class="submit header" value="ok" />
+                <input type="submit" class="submit header" value="" />
             </form>
         </aside>
 </header>

@@ -1,2 +1,4 @@
 TODO
+----
+Cacher les commentaires si besoin dans single
 Internationalisation
