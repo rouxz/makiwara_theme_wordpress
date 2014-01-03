@@ -14,7 +14,7 @@
 
     <!-- header for explaining the related category -->
     <?php if ( have_posts() ) : ?>
-    <header class="category shadow minimal">
+    <header class="shadow content_main content_height_minimal">
         <h1 class="category"><?php printf( __( 'Category Archives: %s', 'twentyfourteen' ), single_cat_title( '', false ) ); ?></h1>
 
 		<?php
@@ -40,7 +40,7 @@
 
             endwhile;
 			//include pagination
-			<article class="shadow minimal">
+			<article class="shadow content_main content_height_minimal">
 				posts_nav_link();
 			</article>
         else :

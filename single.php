@@ -23,7 +23,7 @@
                     get_template_part( 'content', get_post_format() );
             ?>
 				<!-- include link to previous or next page -->
-				<article id="post-link-<?php the_ID(); ?>" class="shadow minimal">
+				<article id="post-link-<?php the_ID(); ?>" class="shadow content_main content_height_minimal">
 					<?php  previous_post_link(); ?> <?php if (get_previous_post() != '' && get_next_post_link() != '') { echo '|';} ?> <?php next_post_link(); ?>
 				</article>
             
@@ -31,7 +31,7 @@
 			<?php
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ){
-						echo '<article id="post-comment-',the_ID(),' class="shadow comments">';
+						echo '<article id="post-comment-',the_ID(),' class="shadow content_main content_height_wrap">';
 						comments_template();
 						echo '</article>';
 					}

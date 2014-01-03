@@ -10,7 +10,7 @@
 <?php get_header(); ?>
 
 <section id="#container">
-	<article id="post-<?php the_ID(); ?>" class="shadow post">
+	<article id="post-<?php the_ID(); ?>" class="shadow post content_main content_height_wrap">
 		<h1 class="post">Page not found</h1>
 			<!--Category-->
 			<h2 class="post"></h2>

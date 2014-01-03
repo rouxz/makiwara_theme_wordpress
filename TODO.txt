@@ -1,4 +1,4 @@
 TODO
 ----
-Cacher les commentaires si besoin dans single
+N'afficher que les extraits par défaut sur la page d'acceuil
 Internationalisation

@@ -19,7 +19,7 @@
 					get_template_part( 'content', get_post_format() );
 				};
 				//include pagination
-				<article class="shadow minimal">
+				<article class="shadow content_main content_height_wrap">
 					posts_nav_link();
 				</article>
 			}

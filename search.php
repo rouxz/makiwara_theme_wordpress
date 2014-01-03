@@ -13,7 +13,7 @@
 <section id="container">
 
     <!-- header for explaining the related category -->
-    <header class="category shadow minimal">
+    <header class="shadow content_main content_height_minimal">
         <h1 class="category">Search for : <?php the_search_query(); ?></h1>
     </header>
     
@@ -32,7 +32,7 @@
 
             endwhile;
 			//include pagination
-			<article class="shadow minimal">
+			<article class="shadow content_main content_height_minimal">
 				posts_nav_link();
 			</article>
         else :
