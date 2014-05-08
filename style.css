@@ -147,17 +147,17 @@ body {
     font-weight: 400;
 	
 	/* line underneath the button */
-	border-bottom: solid rgba(10,140,112,0.5);
-	border-bottom-width: 4px;
-	border-right: solid rgba(167, 168, 171, 0.5);
-	border-right-width: 1px;
+	border-bottom: solid hsl(210, 30%, 8%);
+	border-bottom-width: 1px;
+
 
 }
 
 	
 .top_button:hover{
-	border-bottom: solid rgba(14,204,163,1);
-    color: rgb(14,204,163);
+	border-bottom: solid rgb(23, 77, 131);
+    border-bottom-width: 1px;
+    color: rgb(23, 77, 131);
 }	
 
 
@@ -168,7 +168,7 @@ body {
 }
 
 .top_button a:hover{
-    color: rgb(14,204,163);
+    color: rgb(23, 77, 131);
     text-decoration:none;
 }
 
@@ -317,27 +317,27 @@ header.category{
 
 /* add a shadow effect undex a box */
 .shadow {
-  -moz-box-shadow:    3px 3px 5px 0px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 0px #ccc;
-  box-shadow:         3px 3px 5px 0px #ccc;
+  -moz-box-shadow:    3px 3px 5px 0px #4D5359;
+  -webkit-box-shadow: 3px 3px 5px 0px #4D5359;
+  box-shadow:         3px 3px 5px 0px #4D5359;
 }
 
 
 /* high level class */
 .dark{
-	background-color:  #393D40;
+	background-color:  #475766;
 }
 
 .darker{
 
-	background-color : #393D40;
+	background-color : #4D5359;
 	color: #f8f8f8;
 	
 }
 
 .clear{
 
-	background-color : #ebf2f8;
+	background-color : rgb(204,221,237);
 	color: #1a2f40;
 	
 }
