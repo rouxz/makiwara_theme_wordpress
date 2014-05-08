@@ -15,7 +15,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 700 : forms
 800 : Browsing through posts
 900 : reusable classes 
-1000 : wp-core 
+1000 : wp-core
+9999 : generic style
 */
 
 
@@ -481,4 +482,15 @@ a img.aligncenter {
     line-height: 17px;
     margin: 0;
     padding: 0 4px 5px;
+}
+
+
+code {
+    font-family: 'Share Tech Mono', sans-serif ;
+    font-weight: 400;
+    border: 0px;
+    margin : 10px 5px 10px 5px;
+    width: auto;
+    height: auto;
+    background-color: rgb(213,214,219); 
 }

@@ -1,5 +1,5 @@
 TODO
 ----
-N'afficher que les extraits par d�faut sur la page d'acceuil
+N'afficher que les extraits par défaut sur la page d'acceuil
 Internationalisation
 Corriger l'affichage des pages
