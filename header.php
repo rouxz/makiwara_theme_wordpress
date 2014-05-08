@@ -33,12 +33,15 @@
 	<?php wp_head(); ?>
 </head>
 
-
+<body>
 <div id="wrapper">
-<header id="main_header" class="darker shadow">
-		<div id="title" class="dark"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-		<nav id="navbar">
-			<?php $args = array(
+    
+<div id="middle" class="clear">
+
+<!-- barre de navigation -->
+    <nav id="navbar_vertical" class="dark shadow">
+        <header id="title" class="dark"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></header>
+        <?php $args = array(
 				'type'                     => 'post',
 				'child_of'                 => 0,
 				'parent'                   => '',
@@ -57,19 +60,15 @@
 				echo '<div class="top_button"><a href="'.get_category_link( $category->cat_ID ).'" title="">'.$category->cat_name.'</a></div>';
 				};
 		  
-		  ?></nav>
-		<!-- champ de recherche -->
-		<aside id="searchbox">
+		  ?>
+        <!-- champ de recherche -->
+        <aside id="searchbox">
             <form action="<?php echo home_url( '/' ); ?>" method="get">
                 <input name="s" id="q" type="text" size="10" class="header" 
                 value="" accesskey="4" placeholder="Search the blog..."/>
                 <input type="submit" class="submit header" value="" />
             </form>
         </aside>
-</header>
+    </nav>
 
-<div id="middle" class="clear">
-
-
-
-
+<!-- contenu -->
