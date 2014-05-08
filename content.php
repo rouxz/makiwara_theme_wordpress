@@ -25,7 +25,7 @@
         <p class="small_space">par <span class="post_author"><?php the_author() ?></span> le <span class="post_date"><?php the_date() ?></span></p>
 		<!-- tags of the post -->
 		<p>
-			<?php the_tags( '<span class="tag-links">', ', ', '</span>' ); ?>
+			<em>Tags</em> <?php the_tags( '<span class="tag-links">', ', ', '</span>' ); ?>
         </p>  
     </footer>
 </article><!-- #post-## -->

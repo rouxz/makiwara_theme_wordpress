@@ -40,9 +40,11 @@
 
             endwhile;
 			//include pagination
-			echo '<article class="shadow content_main content_height_minimal">';
-				posts_nav_link();
-			echo '</article>';
+            
+                echo '<article class="shadow content_main content_height_minimal">';
+                    posts_nav_link();
+                echo '</article>';
+            
         else :
             // If no content, include the "No posts found" template.
             get_template_part( 'content', 'none' );

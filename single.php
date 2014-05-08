@@ -31,7 +31,7 @@
 			<?php
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ){
-						echo '<article id="post-comment-',the_ID(),' class="shadow content_main content_height_wrap">';
+						echo '<article id="post-comment-"',the_ID(),'" class="shadow content_main content_height_wrap">';
 						comments_template();
 						echo '</article>';
 					}
