@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 100 : general architecture 
 200 : Elements of main header 
 300 : Contents
-400 : Elements of main footer
+300 : Elements of main footer
 700 : forms
 800 : Browsing through posts
 900 : reusable classes 
@@ -45,6 +45,22 @@ body {
 	position: relative;
 }
 
+#main_header{
+
+	position: fixed;
+	width: 100%;
+	min-width: 1280px;
+	height: 40px;
+	/*display: inline-block;*/
+	clear:none;
+    top:0;
+    left:0;
+    z-index: 11;
+	
+}
+
+
+
 #main_footer{
 
 	position: relative;
@@ -59,12 +75,15 @@ body {
 	
 }
 
+
+
+
 #middle{
 
 	position: relative;
 	clear:none;
 	padding: 20px 0 20px 0;
-    margin: 0 0 0 0;
+    margin: 40px 0 0 0;
     width: 100%;
 	min-width: 1280px;
    /* height: auto;*/
@@ -78,7 +97,7 @@ body {
 
 	position : relative;
 	max-width: 720px;
-	left: 340px;
+	left: 280px;
 	display: block;
 	
 }
@@ -87,23 +106,8 @@ body {
 
 
 /* ------------------------------- */
-/* 200 - Elements of navbar        */
+/* 200 - Elements of main header   */
 /* ------------------------------- */
-
-#navbar_vertical{
-    
-	position: fixed;
-	top: 42px;
-	left: 80px;
-	height: auto;
-	padding: 5px;
-	width : 180px;
-	margin: 0;
-	border: 0;
-	display: block;
-}
-
-
 #title{
 	
 	/*taille*/
@@ -111,23 +115,34 @@ body {
 	/*display: block;*/
 	
 	/* positioning */
-	position: relative;
+	position: absolute;
 	bottom: 0;
 	left: 0;
-    width: auto;
+    width: 270px;
 	padding: 0 5px 0 5px;
 	
 	/*  mise en forme */
-	text-align : left;
-	font-size : Large;
+	text-align : right;
+	font-size : X-large;
     font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
-    color: #FFFFFF;
 
 }
 
+#navbar_vertical{
+    
+	position: fixed;
+	top: 77px;
+	left: 80px;
+	height: auto;
+	padding: 5px;
+	width : 120px;
+	margin: 0;
+	border: 0;
+	display: block;
+}
 
-/* button for nav bar */
+
+/* button for top bar */
 /* ------------------ */
 
 .top_button{
@@ -147,17 +162,17 @@ body {
     font-weight: 400;
 	
 	/* line underneath the button */
-	border-bottom: solid hsl(210, 30%, 8%);
-	border-bottom-width: 1px;
-
+	border-bottom: solid rgba(10,140,112,0.5);
+	border-bottom-width: 4px;
+	border-right: solid rgba(167, 168, 171, 0.5);
+	border-right-width: 1px;
 
 }
 
 	
 .top_button:hover{
-	border-bottom: solid rgb(23, 77, 131);
-    border-bottom-width: 1px;
-    color: rgb(23, 77, 131);
+	border-bottom: solid rgba(14,204,163,1);
+    color: rgb(14,204,163);
 }	
 
 
@@ -168,7 +183,7 @@ body {
 }
 
 .top_button a:hover{
-    color: rgb(23, 77, 131);
+    color: rgb(14,204,163);
     text-decoration:none;
 }
 
@@ -179,11 +194,29 @@ body {
 
 
 
+
 #searchbox{
+	
+	position: absolute;
+	left: 1000px;
+	top: 7px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 26px;
+	width: auto;
+	display : inline-block;
+	text-align : left;
+	
+	
+}
+
+#searchbox2{
 	
 	position: relative;
 	/*left: 1000px;*/
-	margin: 5px 5px;
+	top: 7px;
+	margin: 0;
 	padding: 0;
 	border: 0;
 	height: 26px;
@@ -251,7 +284,7 @@ article footer p.small_space{
 	border: 0;
 	padding: 0;
 	top: 0;
-	left: 340px;
+	left: 280px;
 	width: 720px;
 	text-align: center;
 }
@@ -271,7 +304,7 @@ input[type=text].header{
 	padding: 0;
 	margin-right: 0;
 	margin-bottom: 0;
-	width: 176px;
+	width: 192px;
 	height: 26px;
 	color: #999999;
 	outline: none;
@@ -280,7 +313,7 @@ input[type=text].header{
 input[type=submit].header{
 	position: absolute;
 	top: 0;
-	left: 150px;
+	left: 166px;
 	text-shadow: none !important;
 	border: 0;
 	height: 26px;
@@ -317,27 +350,27 @@ header.category{
 
 /* add a shadow effect undex a box */
 .shadow {
-  -moz-box-shadow:    3px 3px 5px 0px #4D5359;
-  -webkit-box-shadow: 3px 3px 5px 0px #4D5359;
-  box-shadow:         3px 3px 5px 0px #4D5359;
+  -moz-box-shadow:    3px 3px 5px 0px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 0px #ccc;
+  box-shadow:         3px 3px 5px 0px #ccc;
 }
 
 
 /* high level class */
 .dark{
-	background-color:  #475766;
+	background-color:  #393D40;
 }
 
 .darker{
 
-	background-color : #4D5359;
+	background-color : #393D40;
 	color: #f8f8f8;
 	
 }
 
 .clear{
 
-	background-color : rgb(204,221,237);
+	background-color : #ebf2f8;
 	color: #1a2f40;
 	
 }

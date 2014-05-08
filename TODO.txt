@@ -3,3 +3,5 @@ TODO
 N'afficher que les extraits par défaut sur la page d'acceuil
 Internationalisation
 Corriger l'affichage des pages
+corriger la recherche
+Corriger l'effet d'ombre
