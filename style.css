@@ -19,6 +19,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 9999 : generic style
 */
 
+@charset "UTF-8";
 
 /* -------------------------- */
 /* 100 - general architecture */
@@ -34,12 +35,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 body { 
-    
+
     position : static;
-    background-color:  #393D40;
+    background-color:  hsl(209, 6%, 24%);
     min-width: 1280px;   
-    
 }
+
 
 #wrapper{
 	position: relative;
@@ -147,7 +148,7 @@ body {
     font-weight: 400;
 	
 	/* line underneath the button */
-	border-bottom: solid hsl(210, 30%, 8%);
+	border-bottom: solid hsl(209, 30%, 8%);
 	border-bottom-width: 1px;
 
 
@@ -155,26 +156,26 @@ body {
 
 	
 .top_button:hover{
-	border-bottom: hsl(210, 30%, 50%);
+	border-bottom: solid hsl(209, 30%, 50%);
     border-bottom-width: 1px;
-    color: rgb(23, 77, 131);
-	background-color: hsl(210, 30%, 50%);
+    color: hsl(210, 70%, 30%);
+	background-color: hsl(209, 30%, 50%);
 }	
 
 
 
 .top_button a{
-    color: rgb(167, 168, 171);
+    color: hsl(225, 2%, 66%);
     text-decoration:none;
 }
 
 .top_button a:hover{
-    color: rgb(75, 75, 77);
+    color: hsl(240, 1%, 30%);
     text-decoration:none;
 }
 
 .top_button a:visited{
-    color: rgb(167, 168, 171);
+    color: hsl(225, 2%, 66%);
     text-decoration :none;
 }
 
@@ -326,20 +327,20 @@ header.category{
 
 /* high level class */
 .dark{
-	background-color:  #475766;
+	background-color:  hsl(209, 18%, 34%);
 }
 
 .darker{
 
-	background-color : #4D5359;
-	color: #f8f8f8;
+	background-color : hsl(209, 7%, 33%);
+	color: hsl(0, 0%, 97%);
 	
 }
 
 .clear{
 
-	background-color : rgb(204,221,237);
-	color: #1a2f40;
+	background-color : hsl(209, 48%, 86%);
+	color: hsl(207, 42%, 18%);
 	
 }
 
