@@ -40,7 +40,7 @@
 
 <!-- barre de navigation -->
     <nav id="navbar_vertical" class="dark shadow">
-        <header id="title" class="dark"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></header>
+        <header id="title" class="dark"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="nounderline"><?php bloginfo( 'name' ); ?></a></header>
         <?php $args = array(
 				'type'                     => 'post',
 				'child_of'                 => 0,
@@ -57,7 +57,7 @@
 			); 
 			$categories = get_categories( $args ); 
 			foreach ($categories as $category) {
-				echo '<div class="top_button"><a href="'.get_category_link( $category->cat_ID ).'" title="">'.$category->cat_name.'</a></div>';
+				echo '<div class="top_button"><a href="'.get_category_link( $category->cat_ID ).'" title="" class="nounderline">'.$category->cat_name.'</a></div>';
 				};
 		  
 		  ?>
